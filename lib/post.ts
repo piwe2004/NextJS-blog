@@ -6,7 +6,6 @@ import remarkHtml from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-
 export function getSortedPostsData() {
   // /posts파일 이름 잡아주기
   const fileNames = fs.readdirSync(postsDirectory);
@@ -45,7 +44,6 @@ export function getAllPostIds() {
 }
 
 export async function getPostData(id: string) {
-  console.log(id);
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
